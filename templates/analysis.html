@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/static/nicole-geri-gMJ3tFOLvnA-unsplash.jpg');
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+input[type=text],[type=number], select, textarea {
+  width: 70%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  resize: vertical;
+  
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color:white;
+}
+
+vi{
+color:white;
+}
+
+button[type=submit] {
+  background-color: #1100ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 14px;
+  opacity: 0.8;
+  float: center;
+}
+
+button[type=submit]:hover {
+  background-color: #ff0000;
+}
+
+mark{ 
+  background-color:rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+label{
+  color: black;
+}
+
+.container {
+  border-radius: 200px;
+  background-color: #667292;
+  padding: 45px;
+  opacity: 0.9;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+  opacity: 1;
+}
+
+.col-75 {
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+
+<center>
+<h2><mark>VISA Approval Prediction</mark></h2>
+</center>
+
+<div class="container">
+  
+<form action="{{ url_for('predict')}}"method="post">
+<center>
+<div class="row">
+      <div class="col-25">
+        <label for="FULL_TIME_POSITION">Duration of work :</label>
+      </div>
+      <div class="col-75">
+<select name="FULL_TIME_POSITION" required="required" >
+ <option value="">Duration of work </option>
+<option value="1">Full Time</option>
+<option value="0">Part Time </option>
+</select>
+</div>
+</div>
+<br>
+<br>
+<div class="row">
+      <div class="col-25">
+        <label for="PREVAILING_WAGE">Prevailing wage :</label>
+      </div>
+      <div class="col-75">
+<input type="number" name="PREVAILING_WAGE" placeholder="PREVAILING WAGE" required="required"/>
+		</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+      <div class="col-25">
+        <label for="YEAR">Year :</label>
+      </div>
+      <div class="col-75">
+		<select name="YEAR" required="required" >
+<option value="">Year </option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+</select>
+</div>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-25">
+    <label for="WORK_N">State :</label>
+  </div>
+  <div class="col-75">
+<select name="WORK_N" required="required" >
+<option value="">Select State </option>
+<option value="3">New York</option>
+<option value="4">Texas</option>
+<option value="0">California</option>
+<option value="1">Georgia</option>
+<option value="2">Illinois</option>
+<option value="5">Others</option>
+</select>
+</div>
+</div>
+<br>
+<br>
+<div class="row">
+      <div class="col-25">
+        <label for="occupation name">Occupation :</label>
+      </div>
+      <div class="col-75">
+
+<select name="SOC_N" required="required" >
+    <option value="">Occupation</option>
+    <option value="8">it</option>
+    <option value="12">others</option>
+    <option  value="9">manager</option>
+    <option  value="10">mechanical</option>
+    <option  value="3">database</option>
+    <option  value="14">scm</option>
+    <option  value="6">finance</option>
+    <option  value="13">pr</option>
+    <option  value="0">administrative</option>
+    <option  value="2">audit</option>
+    <option  value="7">hr</option>
+    <option  value="1">agri</option>
+    <option  value="5">estate</option>
+    <option  value="11">medical</option>
+    <option  value="4">education</option>
+               </select>
+			   </div>
+			   </div>
+                <br>
+		<br>	
+                   <button type="submit" class="row">Predict</button>
+		
+	</form>
+<br>
+  <br>
+ <h2> 
+ <vi>
+   {{ prediction_text }}
+ </vi>
+	</h2>
+	</div>
+      </head>
+<body>
+    </center>
+    </body>
+</body>
+</html>
+
+</center>
+
+</body>
+</html>
+</div>
+
+</body>
+</html>

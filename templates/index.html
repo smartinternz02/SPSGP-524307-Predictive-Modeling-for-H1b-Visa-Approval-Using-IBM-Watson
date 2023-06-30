@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body {
+  background-image: url('/static/nicole-geri-gMJ3tFOLvnA-unsplash.jpg');
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+h1 {
+  text-align: center;
+  font-size:70px;
+  text-transform: uppercase;
+  color: #000000; 
+}
+h4{
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+}
+a:link, a:visited {
+  background-color: #0011ff;
+  color: white;
+  padding: 19px 29px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left:710px;
+}
+
+a:hover, a:active {
+  padding: 0px 5px
+  vertical-align: middle;
+  background-color: red;
+}
+
+mark{ background-color:rgb(255, 255, 255);
+}
+
+mark1{ background-color:#000000;
+}
+
+</style>
+</head>
+<body>
+
+<h1><mark>H1B Visa Approval Analysis</mark></h1><br><br>
+<h4><mark1><br>Analyse your visa approval status here</mark1></h4><br><br>
+
+<a href="{{url_for('analysis')}}">ANALYSE</a>
+</body>
+</html>
