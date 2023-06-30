@@ -12,7 +12,7 @@ already have an employment offer from a company in the US. We think that this
 prediction algorithm could be a helpful tool for prospective H-1B visa candidates
 as well as potential employers.
 We will feed the model with the dataset including the necessary fields by which the
-machine may classify the case status as certified or refused in order to predict the
+machine may classify the case status as accepted or denied in order to predict the
 case status of the applicants.
 The uncertainty and lack of openness in the selection process are two current
 issues with the H1B visa prediction procedure. There is a yearly cap on the
@@ -28,30 +28,28 @@ Employers who need to plan their staff and find the best employees face hurdles
 as a result of this uncertainty. Additionally, it causes aggravation for those who
 put forth time, energy, and money into the visa application procedure just to
 have a random drawing determine their prospects.
-2.2 PROPOSED SOLUTION
+2.1 PROPOSED SOLUTION
 We developed this Visa Approval status prediction by using the Python language
-which is a interpreted and high level programming language and using the
-Machine Learning algorithms. for coding we used the Jupyter Notebook
+which is an interpreted and high level programming language and using the
+Machine Learning algorithms. For coding we used the Jupyter Notebook
 environment of the Anaconda distributions and the Spyder, it is an integrated
-scientific programming in the python language. For creating an user interface for
-the prediction we used the Flask. It is a micro web framework written in Python. It
+scientific programming IDE for the python language. For creating a user interface for
+the prediction we used the Flask framework. It is a micro web framework written in Python. It
 is classified as a micro frame work because it does not require particular tools or
 libraries. It has no database abstraction layer, form validation, or any other
 components where pre-existing third-party libraries provide common functions,
-and a scripting language to create a webpage is HTML by creating the templates to
-use in th functions of the Flask and HTML.
-3.2 SOFTWARE REQUIRED
-1. Jupyter Notebook Environment
-2. Spyder Ide
-3. Machine Learning Algorithms
-4. Python (pandas, numpy, matplotlib, seaborn, sklearn)
-5. HTML
+and the scripting language used to create the webpages is HTML by creating the templates to
+use in the functions of the Flask and HTML.
+3.1 SOFTWARE REQUIRED
+1. Jupyter Notebook Environment / Google colab
+2. Spyder IDE / VS Code
+3. Machine Learning Algorithms (K Nearest Neighbors)
+4. Python (pandas, numpy, matplotlib, seaborn, sklearn, joblib)
 6. Flask
-7. 4.EXPERIMENTAL INVESTIGATIONS
-The dataset we used for this study was taken from H-1B_Kaggle.More than 10L
-H-1B Visa user records are contained there.It had one label and seven traits that
-could be analysed as attributes. The screenshot of the data set we utilised below
-illustrates these characteristics. CONTEXT STATUS: We did not include the
+4.1 EXPERIMENTAL INVESTIGATIONS
+The dataset we used for this study was taken from H-1B_Kaggle. More than 10L
+H-1B Visa user records are contained there. It had one label and seven traits that
+could be analysed as attributes. CONTEXT STATUS: We did not include the
 cases 'CERTIFIED-WITHDRAWN' and 'WITHDRAWN' since
 'WITHDRAWN' decisions are either made by the petitioning employer or the
 applicant, therefore they are not indicative of USCIS's future actions.
@@ -68,7 +66,7 @@ eliminated data points from petitions submitted by employers with fewer than
 four applications. This processing phase unavoidably discards applications
 submitted by small businesses, however it greatly aids in correcting misspelt
 company names. For the success rate by employer, a functionality was
-developed. Apps by Social Name: The federal occupational classification
+developed. Applications by Social Name: The federal occupational classification
 system known as SOC stands for Standard Occupational Classification System.
 We removed data points with SOC kinds that appear less than four times in the
 data and built a feature for the quantity of H-1B applications by SOC type.
@@ -86,7 +84,7 @@ manually picking an equal number of "CERTIFIED" labelled examples as
 "DENIED" labelled cases, the second version of the development and test sets
 were balanced.
 9. CONCLUSION
-The selection for H visas has increased every year over the past ten years, so
+The selection for H1b visas has increased every year over the past ten years, so
 the goal of this challenge is to develop a tool that will inspire every person
 going through the H1B visa application process and accurately forecast
 whether or not their application will be accepted. Additional details about
@@ -96,13 +94,13 @@ with the H-1B Visa preference procedure. The income feature on this data
 set can be accurately mounted to a range of incomes using the income
 opinions and levels under SOC. From there, it is possible to classify visa
 applications according to career positions and geographic preference.
-Additionally, beautiful beauty algorithms that are not discriminative models
+Additionally, algorithms that are not discriminative models
 can be tested with this method, and their results can also be evaluated. In
 comparison to all of the fantastic algorithms that can be gifted to carry out
-the evaluation activities, the Random Forest classifier works right right right
-here with the superior accuracy. Here, the Random Forest Algorithm was
+the evaluation activities, the KNN classifier works right
+here with the superior accuracy. Here, the KNN Algorithm was
 used to enhance and enrich the data, and as a result, we were given an
-accuracy of 83.06 percent. As a result, this set of recommendations is the
+accuracy of 87 percent. As a result, this set of recommendations is the
 best available for the prediction of H1B visa approval. It has become
 necessary to build a tool to accurately track down H1B visa approval due to
 the rising trend of H1B visa applicants. Therefore, we are able to seek for
